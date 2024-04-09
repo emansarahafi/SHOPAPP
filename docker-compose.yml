@@ -2,7 +2,7 @@ version: '3'
 
 services:
   backend:
-    container_name: mern-backend
+    container_name: shopapp-backend
     build: ./backend
     ports:
       - "8022:8022"
@@ -12,7 +12,7 @@ services:
       - JWT_SECRET=${JWT_SECRET}
 
   frontend:
-    container_name: mern-frontend
+    container_name: shopapp-frontend
     build: ./frontend
     ports:
       - "3000:3000"
