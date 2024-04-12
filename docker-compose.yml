@@ -7,7 +7,7 @@ services:
     ports:
       - "8022:8022"
     environment:
-      - PORT=${BACKEND_PORT}
+      - PORT=8022
       - URL=${MONGODB_URL}
       - JWT_SECRET=${JWT_SECRET}
 
@@ -19,4 +19,4 @@ services:
     depends_on:
       - backend
     environment:
-      - REACT_APP_API_URL=http://backend:${BACKEND_PORT}
+      - REACT_APP_API_URL=http://backend:8022
